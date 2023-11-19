@@ -1,0 +1,39 @@
+html {
+  background-image: url(https://as2.ftcdn.net/v2/jpg/05/72/82/85/1000_F_572828530_ofzCYowQVnlOwkcoBJnZqT36klbJzWdn.jpg);
+}
+
+#boxthing {
+  position: absolute;
+  width: 98%; /* Full width */
+  height: 78%; /* Adjust height as needed */
+  border: 3px solid rgba(0, 0, 0, 0.6156862745); /* Optional border */
+  border-radius: 22.5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5); /* Simulate bevel effect */
+  background-color: rgba(255, 255, 255, 0.5); /* White background with 73% opacity */
+  backdrop-filter: blur(0.5em) brightness(1) contrast(1.1);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  bottom: 1%;
+  left: 1%;
+}
+
+#boxthing {
+  position: absolute;
+  width: 98%; /* Full width */
+  height: 79%; /* Adjust height as needed */
+  border: 3px solid rgba(0, 0, 0, 0.6156862745); /* Optional border */
+  border-radius: 22.5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5); /* Simulate bevel effect */
+  background-color: rgba(255, 255, 255, 0.5); /* White background with 73% opacity */
+  backdrop-filter: blur(0.5em) brightness(1) contrast(1.1);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  bottom: 2%;
+  left: 1%;
+}/*# sourceMappingURL=xorro.css.map */

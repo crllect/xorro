@@ -1,0 +1,43 @@
+@import '_variables.scss';
+
+html {
+    background-image: url(https://as2.ftcdn.net/v2/jpg/05/72/82/85/1000_F_572828530_ofzCYowQVnlOwkcoBJnZqT36klbJzWdn.jpg);
+}
+
+#boxthing {
+    position: absolute;
+    width: calc((100% - (2 * $sideMargin))); /* Full width */
+    height: calc(100% - (2 * $sideMargin) - $wayBarHeight); /* Adjust height as needed */
+    border: $borderThickness solid $borderCol; /* Optional border */
+    border-radius: $bevelRad;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5); /* Simulate bevel effect */
+    background-color: $windowCol; /* White background with 73% opacity */
+    backdrop-filter: blur($windowBlur) brightness($windowBrightness) contrast($windowContrast);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    bottom: $bottomMargin;
+    left: $sideMargin;
+}
+
+#boxthing {
+    position: absolute;
+    width: calc((100% - (2 * $sideMargin))); /* Full width */
+    height: calc(100% - $sideMargin - $wayBarHeight); /* Adjust height as needed */
+    border: $borderThickness solid $borderCol; /* Optional border */
+    border-radius: $bevelRad;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5); /* Simulate bevel effect */
+    background-color: $windowCol; /* White background with 73% opacity */
+    backdrop-filter: blur($windowBlur) brightness($windowBrightness) contrast($windowContrast);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    bottom: calc(2 * $bottomMargin);
+    left: $sideMargin;
+}
+
+// in the future make it so when you hover over a window, its boarder changes color to become brighter, and it becomes slightly bigger by like 5-20% ish

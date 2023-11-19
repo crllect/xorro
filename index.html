@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <script>
+            // set zorro version
+            var zorroVersion = "0.1";
+            // page title
+            document.title = "Xorro " + zorroVersion;
+        </script>
+
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Include the xorrro stylesheet -->
+        <link rel="stylesheet" href="css/xorro.css" />
+
+        <!-- sets the favicon -->
+        <link
+            rel="icon"
+            href="assets/xorro-favicon-hypr-2.png"
+            id="image/x-icon"
+        />
+
+        <!-- dynamically sets the favicon based on user color scheme -->
+        <script>
+            function updateFavicon() {
+                const favicon = document.getElementById("image/x-icon");
+                if (
+                    window.matchMedia &&
+                    window.matchMedia("(prefers-color-scheme: dark)").matches
+                ) {
+                    // User prefers a dark color scheme
+                    favicon.href = "assets/xorro-favicon-dark-2.png";
+                } else {
+                    // User prefers a light color scheme
+                    favicon.href = "assets/xorro-favicon-light-2.png";
+                }
+            }
+
+            // Call the function on load
+            updateFavicon();
+        </script>
+        <script src="js/particles.js"></script>
+    </head>
+
+    <body>
+        <div class="waybar">
+            <div class="deviceInfo"></div>
+
+            <div class="tabs"></div>
+        </div>
+        <div class="mainWindow">
+            <canvas id = "boxthing"></canvas>
+        </div>
+        <div class="menu"></div>
+    </body>
+</html>
