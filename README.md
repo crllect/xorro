@@ -40,3 +40,4 @@ Rough roadmap:
 - Add tabs
 - Create bottom tabs for switching
 - Add settings for color scheme, favicon, and wallpaper
+- Add games page to menu
