@@ -32,3 +32,11 @@ while (true) {
 ---
 If you even moderately enjoy this, star this and follow my GitHub, I promise you wont regret it. 
 # Anyways, add me on [discord](https://discord.com/users/713488984596021291) also 
+---
+Rough roadmap:
+- Add tiling windows
+- Add waybar
+- Add menu
+- Add tabs
+- Create bottom tabs for switching
+- Add settings for color scheme, favicon, and wallpaper
