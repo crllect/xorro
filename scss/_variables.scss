@@ -1,11 +1,35 @@
+// Colors
 $bgCol: #000000;
 $borderCol: #0000009d;
-$bevelRad: 22.5px;
-$borderThickness: 3px;
-$windowCol: rgb(255, 255, 255, 0.5);
-$windowBlur: 0.5em;
+$windowCol: rgba(255, 255, 255, 0.3);
+
+// Window Properties
+$windowBlur: 0.15em;
 $windowBrightness: 1;
 $windowContrast: 1.1;
+
+// Shadow properties
+$shadowCol: rgba(0, 0, 0, 0.5);
+$shadowRad: 5px 5px 5px;
+
+// Hover Vars
+$hoverConst: 1em;
+$hoverCoefficient: 1;
+$hoverWindowBlur: 0.25em;
+$hoverWindowBrightness: 1.2;
+$hoverWindowContrast: 1.15;
+$hoverBorderCol: #ffffff9d;
+$hoverWindowCol: rgba(231, 0, 81, 0.5);
+
+// Margins
+$uniMargin: 1%;
 $bottomMargin: 1%;
 $sideMargin: 1%;
 $wayBarHeight: 20%;
+
+// Bevels
+$bevelRad: 22.5px;
+$borderThickness: 3px;
+
+// Transitions
+$transitionSpeed: 0.2s;

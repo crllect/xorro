@@ -1,43 +1,69 @@
-@import '_variables.scss';
+@import "_variables.scss";
 
 html {
-    background-image: url(https://as2.ftcdn.net/v2/jpg/05/72/82/85/1000_F_572828530_ofzCYowQVnlOwkcoBJnZqT36klbJzWdn.jpg);
+    background-color: $bgCol;
+    overflow: hidden;
+}
+
+#particles-js {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure it's behind other content */
 }
 
 #boxthing {
     position: absolute;
-    width: calc((100% - (2 * $sideMargin))); /* Full width */
-    height: calc(100% - (2 * $sideMargin) - $wayBarHeight); /* Adjust height as needed */
-    border: $borderThickness solid $borderCol; /* Optional border */
+    @if $uniMargin != 0% {
+        width: calc((100% - (2 * $uniMargin)));
+        height: calc(100% - $uniMargin - $wayBarHeight);
+        bottom: calc(2 * ($uniMargin));
+        left: $uniMargin;
+    } @else {
+        width: calc((100% - (2 * $sideMargin)));
+        height: calc(100% - $sideMargin - $wayBarHeight);
+        bottom: calc(2 * ($bottomMargin));
+        left: $sideMargin;
+    }
+    border: $borderThickness solid $borderCol;
     border-radius: $bevelRad;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5); /* Simulate bevel effect */
-    background-color: $windowCol; /* White background with 73% opacity */
-    backdrop-filter: blur($windowBlur) brightness($windowBrightness) contrast($windowContrast);
+    box-shadow: $shadowRad $shadowCol;
+    background-color: $windowCol;
+    backdrop-filter:
+        blur($windowBlur)
+        brightness($windowBrightness)
+        contrast($windowContrast);
     box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    bottom: $bottomMargin;
-    left: $sideMargin;
+    transform: translate(0, 0);
+    transition: box-shadow $transitionSpeed ease, border $transitionSpeed ease, background-color $transitionSpeed ease, width $transitionSpeed ease, height $transitionSpeed ease, left $transitionSpeed ease, bottom $transitionSpeed ease, transform $transitionSpeed ease;
 }
 
-#boxthing {
-    position: absolute;
-    width: calc((100% - (2 * $sideMargin))); /* Full width */
-    height: calc(100% - $sideMargin - $wayBarHeight); /* Adjust height as needed */
-    border: $borderThickness solid $borderCol; /* Optional border */
-    border-radius: $bevelRad;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5); /* Simulate bevel effect */
-    background-color: $windowCol; /* White background with 73% opacity */
-    backdrop-filter: blur($windowBlur) brightness($windowBrightness) contrast($windowContrast);
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    bottom: calc(2 * $bottomMargin);
-    left: $sideMargin;
+#boxthing:hover {
+    @if $uniMargin != 0% {
+        width: calc((((100% - (2 * $uniMargin))) * $hoverCoefficient) + $hoverConst);
+        height: calc(((100% - $uniMargin - $wayBarHeight) * $hoverCoefficient) + $hoverConst);
+        left: calc($uniMargin - (((100% - (2 * $uniMargin)) * ($hoverCoefficient - 1)) / 2) - ($hoverConst / 2));
+        bottom: calc(2 * $uniMargin - (((100% - $uniMargin - $wayBarHeight) * ($hoverCoefficient - 1)) / 2) - ($hoverConst / 2));
+    } @else {
+        width: calc((((100% - (2 * $sideMargin))) * $hoverCoefficient) + $hoverConst);
+        height: calc(((100% - $sideMargin - $wayBarHeight) * $hoverCoefficient) + $hoverConst);
+        left: calc($sideMargin - (((100% - (2 * $sideMargin)) * ($hoverCoefficient - 1)) / 2) - ($hoverConst / 2));
+        bottom: calc(2 * $bottomMargin - (((100% - $sideMargin - $wayBarHeight) * ($hoverCoefficient - 1)) / 2) - ($hoverConst / 2));
+    }
+    transform: scale($hoverCoefficient);
+    box-shadow: $shadowRad $shadowCol;
+    background-color: $hoverWindowCol;
+    border: $borderThickness solid $hoverBorderCol;
+    backdrop-filter:
+        blur($hoverWindowBlur)
+        brightness($hoverWindowBrightness)
+        contrast($hoverWindowContrast);
 }
 
 // in the future make it so when you hover over a window, its boarder changes color to become brighter, and it becomes slightly bigger by like 5-20% ish
