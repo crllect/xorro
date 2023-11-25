@@ -43,6 +43,8 @@
             // Call the function on load
             updateFavicon();
         </script>
+        <script src="https://unpkg.com/@ungap/custom-elements-builtin"></script>
+        <script type="module" src="https://unpkg.com/x-frame-bypass"></script>
         <script src="js/particles.js"></script>
     </head>
 
@@ -55,7 +57,8 @@
             <div class="tabs"></div>
         </div>
         <div class="mainWindow">
-            <canvas id = "boxthing"></canvas>
+            <canvas></canvas>
+            <iframe is="x-frame-bypass" src="https://news.ycombinator.com/" id="boxthing"></iframe>
         </div>
         <div class="menu"></div>
     </body>

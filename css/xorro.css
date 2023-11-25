@@ -1,5 +1,5 @@
 html {
-  background-color: #000000;
+  background-image: url(https://as2.ftcdn.net/v2/jpg/05/72/82/85/1000_F_572828530_ofzCYowQVnlOwkcoBJnZqT36klbJzWdn.jpg);
   overflow: hidden;
 }
 
@@ -29,17 +29,17 @@ html {
   justify-content: center;
   text-align: center;
   transform: translate(0, 0);
-  transition: box-shadow 0.2s ease, border 0.2s ease, background-color 0.2s ease, width 0.2s ease, height 0.2s ease, left 0.2s ease, bottom 0.2s ease, transform 0.2s ease;
+  transition: background-color 0.2s ease, width 0.2s ease, height 0.2s ease, left 0.2s ease, bottom 0.2s ease, transform 0.2s ease;
 }
 
 #boxthing:hover {
-  width: calc(98% + 1em);
-  height: calc(79% + 1em);
-  left: calc(1% - 0.5em);
-  bottom: calc(2% - 0.5em);
-  transform: scale(1);
+  width: calc(98.098% + 0.5em);
+  height: calc(79.079% + 0.5em);
+  left: calc(0.951% - 0.25em);
+  bottom: calc(1.9605% - 0.25em);
+  transform: scale(1.001);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   background-color: rgba(231, 0, 81, 0.5);
-  border: 3px solid rgba(255, 255, 255, 0.6156862745);
+  border: 4px solid rgba(255, 255, 255, 0.6156862745);
   backdrop-filter: blur(0.25em) brightness(1.2) contrast(1.15);
 }/*# sourceMappingURL=xorro.css.map */

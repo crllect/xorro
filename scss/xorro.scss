@@ -1,7 +1,7 @@
 @import "_variables.scss";
 
 html {
-    background-color: $bgCol;
+    background-image: url(https://as2.ftcdn.net/v2/jpg/05/72/82/85/1000_F_572828530_ofzCYowQVnlOwkcoBJnZqT36klbJzWdn.jpg);
     overflow: hidden;
 }
 
@@ -41,7 +41,7 @@ html {
     justify-content: center;
     text-align: center;
     transform: translate(0, 0);
-    transition: box-shadow $transitionSpeed ease, border $transitionSpeed ease, background-color $transitionSpeed ease, width $transitionSpeed ease, height $transitionSpeed ease, left $transitionSpeed ease, bottom $transitionSpeed ease, transform $transitionSpeed ease;
+    transition: background-color $transitionSpeed ease, width $transitionSpeed ease, height $transitionSpeed ease, left $transitionSpeed ease, bottom $transitionSpeed ease, transform $transitionSpeed ease;
 }
 
 #boxthing:hover {
@@ -59,7 +59,7 @@ html {
     transform: scale($hoverCoefficient);
     box-shadow: $shadowRad $shadowCol;
     background-color: $hoverWindowCol;
-    border: $borderThickness solid $hoverBorderCol;
+    border: $hoverBorderThickness solid $hoverBorderCol;
     backdrop-filter:
         blur($hoverWindowBlur)
         brightness($hoverWindowBrightness)

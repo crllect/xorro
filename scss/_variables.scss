@@ -13,13 +13,14 @@ $shadowCol: rgba(0, 0, 0, 0.5);
 $shadowRad: 5px 5px 5px;
 
 // Hover Vars
-$hoverConst: 1em;
-$hoverCoefficient: 1;
+$hoverConst: 0.5em;
+$hoverCoefficient: 1.001;
 $hoverWindowBlur: 0.25em;
 $hoverWindowBrightness: 1.2;
 $hoverWindowContrast: 1.15;
 $hoverBorderCol: #ffffff9d;
 $hoverWindowCol: rgba(231, 0, 81, 0.5);
+$hoverBorderThickness: 4px;
 
 // Margins
 $uniMargin: 1%;
