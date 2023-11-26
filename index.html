@@ -43,6 +43,7 @@
             // Call the function on load
             updateFavicon();
         </script>
+        <!-- <iframe is="x-frame-bypass" src="https://news.ycombinator.com/"></iframe> -->
         <script src="https://unpkg.com/@ungap/custom-elements-builtin"></script>
         <script type="module" src="https://unpkg.com/x-frame-bypass"></script>
         <script src="js/particles.js"></script>
@@ -51,16 +52,49 @@
     <body>
         <div id="particles-js"></div>
 
-        <div class="waybar">
+        <div class="topBar">
+            <canvas class="waybar"></canvas>
             <div class="deviceInfo"></div>
 
             <div class="tabs"></div>
         </div>
-        <div class="mainWindow">
-            <canvas></canvas>
-            <iframe is="x-frame-bypass" src="https://news.ycombinator.com/" id="boxthing"></iframe>
+        <div class="windows">
+            <!-- <iframe class="iframeWindow" src="https://copy.sh/v86/?profile=archlinux"></iframe> -->
+            <canvas class="mainWindow"></canvas>
         </div>
-        <div class="menu"></div>
+        <div class="sidePanel">
+            <svg
+                class="menu"
+                version="1.1"
+                id="Layer_1"
+                viewBox="-37.7 -37.7 452.40 452.40"
+                xml:space="preserve"
+                width="256px"
+                height="256px"
+                stroke-width="3.7700000000000005"
+            >
+                <g id="SVGRepo_bgCarrier" stroke-width="0" />
+                    <g>
+                        <rect x="75" y="73.5" width="302" height="30" />
+                        <rect y="73.5" width="30" height="30" />
+                        <rect y="273.5" width="30" height="30" />
+                        <rect x="75" y="273.5" width="302" height="30" />
+                        <rect y="173.5" width="30" height="30" />
+                        <rect x="75" y="173.5" width="302" height="30" />
+                    </g>
+
+                <g id="SVGRepo_iconCarrier">
+                    <g>
+                        <rect x="75" y="73.5" width="302" height="30" />
+                        <rect y="73.5" width="30" height="30" />
+                        <rect y="273.5" width="30" height="30" />
+                        <rect x="75" y="273.5" width="302" height="30" />
+                        <rect y="173.5" width="30" height="30" />
+                        <rect x="75" y="173.5" width="302" height="30" />
+                    </g>
+                </g>
+            </svg>
+        </div>
     </body>
     <script src="js/indexParticles.js"></script>
 </html>

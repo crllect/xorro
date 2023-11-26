@@ -1,10 +1,9 @@
-// Colors
+// Background
 $bgCol: #000000;
-$borderCol: #0000009d;
-$windowCol: rgba(255, 255, 255, 0.3);
 
 // Window Properties
-$windowBlur: 0.15em;
+$windowCol: rgba(12, 26, 28, 0.8);
+$windowBlur: 1em;
 $windowBrightness: 1;
 $windowContrast: 1.1;
 
@@ -14,23 +13,27 @@ $shadowRad: 5px 5px 5px;
 
 // Hover Vars
 $hoverConst: 0.5em;
-$hoverCoefficient: 1.001;
-$hoverWindowBlur: 0.25em;
+$hoverCoefficient: 1;
+$hoverWindowBlur: 1.5em;
 $hoverWindowBrightness: 1.2;
 $hoverWindowContrast: 1.15;
-$hoverBorderCol: #ffffff9d;
-$hoverWindowCol: rgba(231, 0, 81, 0.5);
-$hoverBorderThickness: 4px;
+$hoverBorderCol: rgba(38, 222, 250, 1);
+$hoverWindowCol: rgba(26, 28, 28, 0.9);
+$hoverBorderThickness: 2.5px;
 
 // Margins
-$uniMargin: 1%;
+$uniMargin: 0.5%;
 $bottomMargin: 1%;
-$sideMargin: 1%;
-$wayBarHeight: 20%;
+$sideMargin: 0.5%;
+$waybarHeight: 10%;
 
-// Bevels
-$bevelRad: 22.5px;
-$borderThickness: 3px;
+// Border
+$bevelRad: 12.5px;
+$borderThickness: 2.25px;
+$borderCol: #9c9c9c5b;
 
 // Transitions
-$transitionSpeed: 0.2s;
+$transitionSpeed: 0.4s;
+
+// Menu
+$menuButtonCol: #ffffff;

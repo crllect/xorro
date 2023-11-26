@@ -1,5 +1,5 @@
 html {
-  background-image: url(https://as2.ftcdn.net/v2/jpg/05/72/82/85/1000_F_572828530_ofzCYowQVnlOwkcoBJnZqT36klbJzWdn.jpg);
+  background-image: url(https://w.wallhaven.cc/full/wy/wallhaven-wyp7ep.jpg);
   overflow: hidden;
 }
 
@@ -12,34 +12,126 @@ html {
   z-index: -1; /* Ensure it's behind other content */
 }
 
-#boxthing {
+.mainWindow {
   position: absolute;
-  width: 98%;
-  height: 79%;
-  bottom: 2%;
-  left: 1%;
-  border: 3px solid rgba(0, 0, 0, 0.6156862745);
-  border-radius: 22.5px;
+  width: 99%;
+  height: 89.5%;
+  bottom: 1%;
+  left: 0.5%;
+  border: 2.25px solid rgba(156, 156, 156, 0.3568627451);
+  border-radius: 12.5px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-  background-color: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(0.15em) brightness(1) contrast(1.1);
+  background-color: rgba(12, 26, 28, 0.8);
+  backdrop-filter: blur(1em) brightness(1) contrast(1.1);
   box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   transform: translate(0, 0);
-  transition: background-color 0.2s ease, width 0.2s ease, height 0.2s ease, left 0.2s ease, bottom 0.2s ease, transform 0.2s ease;
+  transition: background-color 0.4s ease, width 0.4s ease, height 0.4s ease, left 0.4s ease, bottom 0.4s ease, transform 0.4s ease;
 }
 
-#boxthing:hover {
-  width: calc(98.098% + 0.5em);
-  height: calc(79.079% + 0.5em);
-  left: calc(0.951% - 0.25em);
-  bottom: calc(1.9605% - 0.25em);
-  transform: scale(1.001);
+.mainWindow:hover {
+  width: calc(99% + 0.5em);
+  height: calc(89.5% + 0.5em);
+  left: calc(0.5% - 0.25em);
+  bottom: calc(1% - 0.25em);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-  background-color: rgba(231, 0, 81, 0.5);
-  border: 4px solid rgba(255, 255, 255, 0.6156862745);
-  backdrop-filter: blur(0.25em) brightness(1.2) contrast(1.15);
+  background-color: rgba(26, 28, 28, 0.9);
+  border: 2.5px solid rgb(38, 222, 250);
+  backdrop-filter: blur(1.5em) brightness(1.2) contrast(1.15);
+}
+
+.waybar {
+  position: absolute;
+  width: calc(99% - 10vh);
+  height: 7.75%;
+  top: 1%;
+  right: 0.5%;
+  border: 2.25px solid rgba(156, 156, 156, 0.3568627451);
+  border-radius: 12.5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  background-color: rgba(12, 26, 28, 0.8);
+  backdrop-filter: blur(1em) brightness(1) contrast(1.1);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform: translate(0, 0);
+  transition: background-color 0.4s ease, width 0.4s ease, height 0.4s ease, right 0.4s ease, bottom 0.4s ease, transform 0.4s ease;
+}
+
+.waybar:hover {
+  width: calc((99% - 10vh) * 1 + 0.5em);
+  height: calc(7.75% + 0.5em);
+  right: calc(0.5% - 0.125em);
+  top: calc(1% - 0.25em);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  background-color: rgba(26, 28, 28, 0.9);
+  border: 2.5px solid rgb(38, 222, 250);
+  backdrop-filter: blur(1.5em) brightness(1.2) contrast(1.15);
+}
+
+.iframeWindow {
+  position: absolute;
+  width: 99%;
+  height: 89.5%;
+  bottom: 1%;
+  left: 0.5%;
+  border: 2.25px solid rgba(156, 156, 156, 0.3568627451);
+  border-radius: 12.5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  background-color: rgba(12, 26, 28, 0.8);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform: translate(0, 0);
+  transition: background-color 0.4s ease, width 0.4s ease, height 0.4s ease, left 0.4s ease, bottom 0.4s ease, transform 0.4s ease;
+}
+
+.iframeWindow:hover {
+  width: calc(99% + 0.5em);
+  height: calc(89.5% + 0.5em);
+  left: calc(0.5% - 0.25em);
+  bottom: calc(1% - 0.25em);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  background-color: rgba(26, 28, 28, 0.9);
+  border: 2.5px solid rgb(38, 222, 250);
+}
+
+.menu {
+  fill: #ffffff;
+  stroke: #ffffff;
+  position: absolute;
+  width: calc(10vh - 0.5%);
+  height: 7.75%;
+  top: 1%;
+  left: 0.5%;
+  border: 2.25px solid rgba(156, 156, 156, 0.3568627451);
+  border-radius: 12.5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  background-color: rgba(12, 26, 28, 0.8);
+  backdrop-filter: blur(1em) brightness(1) contrast(1.1);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform: translate(0, 0);
+  transition: background-color 0.4s ease, width 0.4s ease, height 0.4s ease, left 0.4s ease, bottom 0.4s ease, transform 0.4s ease;
+}
+
+.menu:hover {
+  width: calc((10vh - 0.5%) * 1 + 0.25em);
+  height: calc(7.75% + 0.25em);
+  left: calc(0.5% - 0.125em);
+  top: calc(1% - 0.125em);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  background-color: rgba(26, 28, 28, 0.9);
+  border: 2.5px solid rgb(38, 222, 250);
+  backdrop-filter: blur(1.5em) brightness(1.2) contrast(1.15);
 }/*# sourceMappingURL=xorro.css.map */
