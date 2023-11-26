@@ -9,7 +9,7 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Ensure it's behind other content */
+  z-index: -1;
 }
 
 .mainWindow {
@@ -101,6 +101,40 @@ html {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   background-color: rgba(26, 28, 28, 0.9);
   border: 2.5px solid rgb(38, 222, 250);
+  backdrop-filter: blur(1.5em) brightness(1.2) contrast(1.15);
+}
+
+.menu {
+  fill: #ffffff;
+  stroke: #ffffff;
+  position: absolute;
+  width: calc(10vh - 0.5%);
+  height: 7.75%;
+  top: 1%;
+  left: 0.5%;
+  border: 2.25px solid rgba(156, 156, 156, 0.3568627451);
+  border-radius: 12.5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  background-color: rgba(12, 26, 28, 0.8);
+  backdrop-filter: blur(1em) brightness(1) contrast(1.1);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform: translate(0, 0);
+  transition: background-color 0.4s ease, width 0.4s ease, height 0.4s ease, left 0.4s ease, bottom 0.4s ease, transform 0.4s ease;
+}
+
+.iframeWindow:hover {
+  width: calc(99% + 0.5em);
+  height: calc(89.5% + 0.5em);
+  left: calc(0.5% - 0.25em);
+  bottom: calc(1% - 0.25em);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  background-color: rgba(26, 28, 28, 0.9);
+  border: 2.5px solid rgb(38, 222, 250);
+  backdrop-filter: blur(1.5em) brightness(1.2) contrast(1.15);
 }
 
 .menu {
