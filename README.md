@@ -1,5 +1,5 @@
 # Xorro
-### This is obviously still a WIP project, but my idea with this was to take an all-in-one proxy solution (such as sodium or rammerhead) and combine it with an extensive game library. That project was never really finished but was released in the form of Zorro. But I decided to try again with a different goal in mind, that of replicating the style of Hyprland, which is a pretty popular tiling window manager.
+### This is obviously still a WIP project, but my idea with this was to take an all-in-one proxy solution (such as sodium or rammerhead) and combine it with an extensive game library. That project was never really finished but was released in the form of Zorro. But I decided to try again with a different goal in mind, that of replicating the style of Hyprland, which is a pretty popular tiling window manager. I have never done something like this, so its going to suck for the most part. Follow me or star the project if your interested in how this is going to come out.
 ---
 ```java
 while (true) {
@@ -34,10 +34,11 @@ If you even moderately enjoy this, star this and follow my GitHub, I promise you
 # Anyways, add me on [discord](https://discord.com/users/713488984596021291) also 
 ---
 Rough roadmap:
-- Add tiling windows
-- Add waybar
-- Add menu
-- Add tabs
-- Create bottom tabs for switching
-- Add settings for color scheme, favicon, and wallpaper
-- Add games page to menu
+- Add waybar with clock and device battery etc...
+- Add menu which will open with a particlesJS background and have like my github and credits and such
+- Add proxy (probably bare server on varcel or smthing)
+- Add tabs (in code, not as a ui element)
+- Create bottom tabs for switching (as a ui element)
+- Add settings for color scheme, favicon, and wallpaper. Basically allows the user to edit elements in _variables.scss
+- Add games page to menu and obviously my game library, which is just 3kh0s with some minor crowd sourcing
+- Move to my is-a.dev page
