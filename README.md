@@ -26,7 +26,7 @@ while (true) {
 	};
 	String discorUsr = "@crllect";
 	String education = "selfTaught";
-	boolean iUseArchBTW = true; // as of last week, i am now a hyprland arch normie
+	boolean iUseArchBTW = true;
 }
 ```
 ---
