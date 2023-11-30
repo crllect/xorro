@@ -20,6 +20,7 @@ $hoverWindowContrast: 1.15;
 $hoverBorderCol: rgba(38, 222, 250, 1);
 $hoverWindowCol: rgba(26, 28, 28, 0.9);
 $hoverBorderThickness: 2.5px;
+$hoverBorderRad: 0.8;
 
 // Margins
 $uniMargin: 0.5%;
@@ -34,6 +35,23 @@ $borderCol: #9c9c9c5b;
 
 // Transitions
 $transitionSpeed: 0.4s;
-
+ 
 // Menu
-$menuButtonCol: #ffffff;
+$menuButtonCol: #ffffff; 
+
+// Pushed
+$pushTransition: $transitionSpeed;
+$pushedWindowCol: rgba(24, 76, 84, 0.6);
+
+
+// Temp/Testing
+$menuPushed: true;
+
+// Functions
+@function perToInt($percent) { // Function to convert percentage to integer
+    @return calc($percent / 1%); 
+}
+
+@function fadeOut($inputCol) {
+    // somethig to fade out using $pushTransition to find the twean speed
+}
