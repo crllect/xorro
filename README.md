@@ -34,6 +34,7 @@ If you even moderately enjoy this, star this and follow my GitHub, I promise you
 # Anyways, add me on [discord](https://discord.com/users/713488984596021291) also 
 ---
 Rough roadmap:
+- create a button framework in js
 - Add waybar with clock and device battery etc...
 - Add menu which will open with a particlesJS background and have like my github and credits and such
 - Add proxy (probably bare server on varcel or smthing)
