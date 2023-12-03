@@ -65,7 +65,7 @@ $fullMenuOffScreenWindowGrad: linear-gradient(90deg, #00000000 0%, $activeWindow
 }
 
 // Presets
-$sizePreset: 0;
+$sizePreset: 3;
 
 @if $sizePreset != 0 {
     @if $sizePreset == 1 {

@@ -1,11 +1,11 @@
 .mainWindow {
   position: absolute;
-  width: 99%;
-  height: 87%;
-  bottom: 1%;
-  right: 0.5%;
+  width: 99.55%;
+  height: 92.275%;
+  bottom: 0.45%;
+  right: 0.225%;
   border: 2.25px solid rgba(156, 156, 156, 0.3568627451);
-  border-radius: 12.5px;
+  border-radius: 6px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   background-color: rgba(12, 26, 28, 0.8);
   backdrop-filter: blur(1em) brightness(1) contrast(1.1);
@@ -19,11 +19,11 @@
 }
 
 .mainWindow:hover {
-  width: calc(99% + 0.5em);
-  height: calc(87% + 0.5em);
-  right: calc(0.5% - 0.25em);
-  bottom: calc(1% - 0.25em);
-  border-radius: calc(10px + (12.5vh - 0.5%) * 1 + 0.25em - (12.5vh - 0.5%) + 2px);
+  width: calc(99.55% + 0.25em);
+  height: calc(92.275% + 0.25em);
+  right: calc(0.225% - 0.125em);
+  bottom: calc(0.45% - 0.125em);
+  border-radius: calc(4.8px + (7.5vh - 0.225%) * 1 + 0.05625em - (7.5vh - 0.225%) + 2px);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   background-color: rgba(26, 28, 28, 0.9);
   border: 2.5px solid rgba(38, 222, 250, 0.9);
@@ -31,29 +31,29 @@
 }
 
 .menuOpen-mainWindow {
-  width: calc(99% - (12.5vh - 0.5% + 10.25%) - 0.5%);
-  height: 87%;
-  bottom: 1%;
-  right: 0.5%;
+  width: calc(99.55% - (7.5vh - 0.225% + 6.4875%) - 0.225%);
+  height: 92.275%;
+  bottom: 0.45%;
+  right: 0.225%;
   backdrop-filter: blur(2.25em) brightness(0.84) contrast(1.265);
 }
 
 .menuOpen-mainWindow:hover {
-  width: calc(99% + 0.5em - (12.5vh - 0.5% + 10.25%) - 0.75% + 0.5% - 0.25em);
-  height: calc(87% + 0.5em);
-  right: calc(0.5% - 0.25em);
-  bottom: calc(1% - 0.25em);
+  width: calc(99.55% + 0.25em - (7.5vh - 0.225% + 6.4875%) - 0.3375% + 0.225% - 0.125em);
+  height: calc(92.275% + 0.25em);
+  right: calc(0.225% - 0.125em);
+  bottom: calc(0.45% - 0.125em);
   backdrop-filter: blur(2.25em) brightness(0.84) contrast(1.265);
 }
 
 .waybar {
   position: absolute;
-  width: calc(99% - 12.5vh);
-  height: 10.25%;
-  top: 1%;
-  right: 0.5%;
+  width: calc(99.55% - 7.5vh);
+  height: 6.4875%;
+  top: 0.45%;
+  right: 0.225%;
   border: 2.25px solid rgba(156, 156, 156, 0.3568627451);
-  border-radius: 12.5px;
+  border-radius: 6px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   background-color: rgba(12, 26, 28, 0.8);
   backdrop-filter: blur(1em) brightness(1) contrast(1.1);
@@ -67,11 +67,11 @@
 }
 
 .waybar:hover {
-  width: calc((99% - 12.5vh) * 1 + 0.5em);
-  height: calc(10.25% + 0.5em);
-  right: calc(0.5% - 0.125em);
-  top: calc(1% - 0.25em);
-  border-radius: calc(10px + (12.5vh - 0.5%) * 1 + 0.25em - (12.5vh - 0.5%) + 2px);
+  width: calc((99.55% - 7.5vh) * 1 + 0.25em);
+  height: calc(6.4875% + 0.25em);
+  right: calc(0.225% - 0.0625em);
+  top: calc(0.45% - 0.125em);
+  border-radius: calc(4.8px + (7.5vh - 0.225%) * 1 + 0.05625em - (7.5vh - 0.225%) + 2px);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   background-color: rgba(26, 28, 28, 0.9);
   border: 2.5px solid rgba(38, 222, 250, 0.9);
@@ -79,58 +79,70 @@
 }
 
 .menuOpen-waybar {
-  width: calc(99% - (12.5vh - 0.5% + 10.25%) - 0.5%);
-  height: 10.25%;
-  top: 1%;
-  right: 0.5%;
+  width: calc(99.55% - (7.5vh - 0.225% + 6.4875%) - 0.225%);
+  height: 6.4875%;
+  top: 0.45%;
+  right: 0.225%;
   backdrop-filter: blur(1.5em) brightness(1.2) contrast(1.15);
 }
 
 .menuOpen-waybar:hover {
-  width: calc(99% + 0.5em - (12.5vh - 0.5% + 10.25%) - 0.5%);
-  height: calc(10.25% + 0.5em);
-  right: calc(0.5% - 0.125em);
-  top: calc(1% - 0.25em);
+  width: calc(99.55% + 0.25em - (7.5vh - 0.225% + 6.4875%) - 0.225%);
+  height: calc(6.4875% + 0.25em);
+  right: calc(0.225% - 0.0625em);
+  top: calc(0.45% - 0.125em);
 }
 
 .iframeWindow {
   position: absolute;
-  width: 99%;
-  height: 87%;
-  bottom: 1%;
-  left: 0.5%;
+  width: 99.55%;
+  height: 92.275%;
+  bottom: 0.45%;
+  right: 0.225%;
   border: 2.25px solid rgba(156, 156, 156, 0.3568627451);
-  border-radius: 12.5px;
+  border-radius: 6px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-  background-color: rgba(12, 26, 28, 0.8);
   box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   transform: translate(0, 0);
-  transition: background-color 0.4s ease, width 0.4s ease, height 0.4s ease, left 0.4s ease, bottom 0.4s ease, transform 0.4s ease, border-radius 0.4s ease;
+  transition: width 0.4s ease, height 0.4s ease, right 0.4s ease, bottom 0.4s ease, transform 0.4s ease, border-radius 0.4s ease;
 }
 
 .iframeWindow:hover {
-  width: calc(99% + 0.5em);
-  height: calc(87% + 0.5em);
-  right: calc(0.5% - 0.25em);
-  bottom: calc(1% - 0.25em);
-  border-radius: calc(10px + (12.5vh - 0.5%) * 1 + 0.25em - (12.5vh - 0.5%) + 2px);
+  width: calc(99.55% + 0.25em);
+  height: calc(92.275% + 0.25em);
+  right: calc(0.225% - 0.125em);
+  bottom: calc(0.45% - 0.125em);
+  border-radius: calc(4.8px + (7.5vh - 0.225%) * 1 + 0.05625em - (7.5vh - 0.225%) + 2px);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-  background-color: rgba(26, 28, 28, 0.9);
   border: 2.5px solid rgba(38, 222, 250, 0.9);
+}
+
+.menuOpen-iframeWindow {
+  width: calc(99.55% - (7.5vh - 0.225% + 6.4875%) - 0.225%);
+  height: 92.275%;
+  bottom: 0.45%;
+  right: 0.225%;
+}
+
+.menuOpen-iframeWindow:hover {
+  width: calc(99.55% + 0.25em - (7.5vh - 0.225% + 6.4875%) - 0.3375% + 0.225% - 0.125em);
+  height: calc(92.275% + 0.25em);
+  right: calc(0.225% - 0.125em);
+  bottom: calc(0.45% - 0.125em);
 }
 
 .menu {
   position: absolute;
-  width: calc(12.5vh - 0.5%);
-  height: 10.25%;
-  top: 1%;
-  left: 0.5%;
+  width: calc(7.5vh - 0.225%);
+  height: 6.4875%;
+  top: 0.45%;
+  left: 0.225%;
   border: 2.25px solid rgba(156, 156, 156, 0.3568627451);
-  border-radius: 12.5px;
+  border-radius: 6px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   background-color: rgba(12, 26, 28, 0.8);
   backdrop-filter: blur(1em) brightness(1) contrast(1.1);
@@ -152,11 +164,11 @@
 }
 
 .menu:hover {
-  width: calc((12.5vh - 0.5%) * 1 + 0.5em);
-  height: calc(10.25% + 0.5em);
-  left: calc(0.5% - 0.25em);
-  top: calc(1% - 0.25em);
-  border-radius: calc(10px + (12.5vh - 0.5%) * 1 + 0.5em - (12.5vh - 0.5%) + 2px);
+  width: calc((7.5vh - 0.225%) * 1 + 0.25em);
+  height: calc(6.4875% + 0.25em);
+  left: calc(0.225% - 0.125em);
+  top: calc(0.45% - 0.125em);
+  border-radius: calc(4.8px + (7.5vh - 0.225%) * 1 + 0.25em - (7.5vh - 0.225%) + 2px);
   box-shadow: 0px 0px 10px rgba(38, 222, 250, 0.6696);
   background-color: rgba(26, 28, 28, 0.9);
   border: 2.5px solid rgba(38, 222, 250, 0.9);
@@ -165,12 +177,12 @@
 
 .menu.menuOpen {
   position: absolute;
-  width: calc(12.5vh - 0.5% + 10.25%);
-  height: 10.25%;
-  top: 1%;
-  left: 0.5%;
+  width: calc(7.5vh - 0.225% + 6.4875%);
+  height: 6.4875%;
+  top: 0.45%;
+  left: 0.225%;
   border: 2.25px solid rgba(156, 156, 156, 0.3568627451);
-  border-radius: 12.5px;
+  border-radius: 6px;
   box-shadow: 0px 0px 10px rgba(38, 222, 250, 0.6696);
   background-color: rgba(24, 76, 84, 0.6);
   backdrop-filter: blur(0.1875em) brightness(1) contrast(1.1);
@@ -192,11 +204,11 @@
 }
 
 .menu.menuOpen:hover {
-  width: calc(12.5vh - 0.5% + 10.25% - 0.25em);
-  height: calc(10.25% - 0.25em);
-  left: calc(0.5% + 0.25em - 0.125%);
-  top: calc(1% + 0.125em);
-  border-radius: calc(12.5px + (12.5vh - 0.5%) * 1 + 0.5em - (12.5vh - 0.5%) + 2px);
+  width: calc(7.5vh - 0.225% + 6.4875% - 0.125em);
+  height: calc(6.4875% - 0.125em);
+  left: calc(0.225% + 0.125em - 0.05625%);
+  top: calc(0.45% + 0.0625em);
+  border-radius: calc(6px + (7.5vh - 0.225%) * 1 + 0.25em - (7.5vh - 0.225%) + 2px);
   box-shadow: 0px 0px 10px rgba(38, 222, 250, 0.6696);
   background-color: rgba(24, 76, 84, 0.6);
   border: 2.5px solid rgba(38, 222, 250, 0.9);
@@ -206,8 +218,8 @@
 .fullMenu {
   position: absolute;
   width: 0px;
-  height: 87%;
-  top: 11.75%;
+  height: 92.275%;
+  top: 7.1625%;
   left: -10em;
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
   border: 2.25px solid linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(156, 156, 156, 0.3568627451) 100%);
@@ -216,12 +228,12 @@
 }
 
 .menuOpen-fullMenu {
-  width: calc(12.5vh - 0.5% + 10.25%);
-  height: 87%;
-  top: 11.75%;
-  left: 0.5%;
+  width: calc(7.5vh - 0.225% + 6.4875%);
+  height: 92.275%;
+  top: 7.1625%;
+  left: 0.225%;
   border: 2.25px solid rgba(156, 156, 156, 0.3568627451);
-  border-radius: 12.5px;
+  border-radius: 6px;
   box-shadow: 0px 0px 10px rgba(38, 222, 250, 0.6696);
   background-color: rgba(24, 76, 84, 0.6);
   backdrop-filter: blur(0.1875em) brightness(1) contrast(1.1);
@@ -235,11 +247,11 @@
 }
 
 .menuOpen-fullMenu:hover {
-  width: calc(12.5vh - 0.5% + 10.25% - 0.25em);
-  height: calc(87% - 0.25em);
-  top: calc(1% + 0.125em + 10.75%);
-  left: calc(0.5% + 0.25em - 0.125%);
-  border-radius: calc(12.5px + (12.5vh - 0.5%) * 1 + 0.5em - (12.5vh - 0.5%) + 2px);
+  width: calc(7.5vh - 0.225% + 6.4875% - 0.125em);
+  height: calc(92.275% - 0.125em);
+  top: calc(0.45% + 0.0625em + 6.7125%);
+  left: calc(0.225% + 0.125em - 0.05625%);
+  border-radius: calc(6px + (7.5vh - 0.225%) * 1 + 0.25em - (7.5vh - 0.225%) + 2px);
   box-shadow: 0px 0px 10px rgba(38, 222, 250, 0.6696);
   background-color: rgba(24, 76, 84, 0.6);
   border: 2.5px solid rgba(38, 222, 250, 0.9);
