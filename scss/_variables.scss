@@ -47,9 +47,9 @@ $transitionSpeed: 0.4s;
 // Menu
 $menuButtonCol: #ffffff;
 
-// Pushed
-$pushTransition: $transitionSpeed;
-$pushedWindowCol: rgba(24, 76, 84, 0.6);
+// active
+$activeTransition: $transitionSpeed;
+$activeWindowCol: rgba(24, 76, 84, 0.6);
 
 // Functions
 @function perToInt($percent) { // Function to convert percentage to integer
@@ -57,5 +57,5 @@ $pushedWindowCol: rgba(24, 76, 84, 0.6);
 }
 
 @function fadeOut($inputCol) {
-    // somethig to fade out using $pushTransition to find the twean speed
+    // somethig to fade out using $activeTransition to find the twean speed
 }
