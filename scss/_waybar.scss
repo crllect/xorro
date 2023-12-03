@@ -36,6 +36,7 @@
         transform $transitionSpeed ease,
         border-radius $transitionSpeed ease,
         stroke $transitionSpeed ease,
+        backdrop-filter $transitionSpeed ease,
         fill $transitionSpeed ease;
 }
 

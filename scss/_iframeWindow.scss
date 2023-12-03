@@ -49,9 +49,4 @@
     box-shadow: $shadowRad $shadowCol; // Box shadow styling
     background-color: $hoverWindowCol; // Background color on hover
     border: $hoverBorderThickness solid $hoverBorderCol; // Border styling on hover
-    // Backdrop filter adjustments on hover
-    backdrop-filter:
-        blur($hoverWindowBlur)
-        brightness($hoverWindowBrightness)
-        contrast($hoverWindowContrast);
 }

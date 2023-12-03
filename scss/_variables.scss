@@ -47,9 +47,13 @@ $transitionSpeed: 0.4s;
 // Menu
 $menuButtonCol: #ffffff;
 
-// active
+// Active
 $activeTransition: $transitionSpeed;
 $activeWindowCol: rgba(24, 76, 84, 0.6);
+
+// Full Menu
+$fullMenuOffScreenBorderGrad: linear-gradient(90deg, #00000000 0%, $borderCol 100%);
+$fullMenuOffScreenWindowGrad: linear-gradient(90deg, #00000000 0%, $activeWindowCol 100%);
 
 // Functions
 @function perToInt($percent) { // Function to convert percentage to integer

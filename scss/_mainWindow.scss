@@ -32,6 +32,7 @@
         right $transitionSpeed ease,
         bottom $transitionSpeed ease,
         transform $transitionSpeed ease,
+        backdrop-filter $transitionSpeed ease,
         border-radius $transitionSpeed ease; // Smooth transitions for various properties
 }
 
