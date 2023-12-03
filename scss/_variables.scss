@@ -12,7 +12,7 @@ $shadowCol: rgba(0, 0, 0, 0.5);
 $shadowRad: 5px 5px 5px;
 
 // Hover Vars
-$hoverConst: 0.7em;
+$hoverConst: 0.5em; // 0.7, 0.5, 0.25
 $hoverCoefficient: 1;
 $hoverWindowBlur: 1.5em;
 $hoverWindowBrightness: 1.2;
@@ -31,13 +31,13 @@ $hoverShadowCol: rgba(
 $hoverShadowRad: 0px 0px 10px;
 
 // Margins
-$uniMargin: 0.5%;
+$uniMargin: 0.5%; // 1, 0.5, 0.225
 $bottomMargin: 0.5%;
 $sideMargin: 0.5%;
-$waybarHeight: 12.5%;
+$waybarHeight: 12.5%; // 17.5, 12.5, 7.5
 
 // Border
-$borderRad: 12.5px;
+$borderRad: 12.5px; // 22.5, 12.5, 6
 $borderThickness: 2.25px;
 $borderCol: #9c9c9c5b;
 
@@ -62,4 +62,26 @@ $fullMenuOffScreenWindowGrad: linear-gradient(90deg, #00000000 0%, $activeWindow
 
 @function fadeOut($inputCol) {
     // somethig to fade out using $activeTransition to find the twean speed
+}
+
+// Presets
+$sizePreset: 0;
+
+@if $sizePreset != 0 {
+    @if $sizePreset == 1 {
+        $borderRad: 22.5px;
+        $uniMargin: 1%;
+        $hoverConst: 0.7em;
+        $waybarHeight: 17.5%;
+    } @else if $sizePreset == 2 {
+        $borderRad: 12.5px;
+        $uniMargin: 0.5%;
+        $hoverConst: 0.5em;
+        $waybarHeight: 12.5%;
+    } @else if $sizePreset == 3 {
+        $borderRad: 6px;
+        $uniMargin: 0.225%;
+        $hoverConst: 0.25em;
+        $waybarHeight: 7.5%;
+    }
 }
