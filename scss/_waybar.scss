@@ -29,10 +29,14 @@
         background-color $transitionSpeed ease,
         width $transitionSpeed ease,
         height $transitionSpeed ease,
-        right $transitionSpeed ease,
+        left $transitionSpeed ease,
         bottom $transitionSpeed ease,
+        right $transitionSpeed ease,
+        top $transitionSpeed ease,
         transform $transitionSpeed ease,
-        border-radius $transitionSpeed ease;
+        border-radius $transitionSpeed ease,
+        stroke $transitionSpeed ease,
+        fill $transitionSpeed ease;
 }
 
 .waybar:hover {
