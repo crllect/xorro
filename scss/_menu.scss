@@ -45,6 +45,8 @@
         right $transitionSpeed ease,
         top $transitionSpeed ease,
         transform $transitionSpeed ease,
+        box-shadow $fastTransitionSpeed ease,
+        border $fastTransitionSpeed ease,
         border-radius $transitionSpeed ease,
         stroke $transitionSpeed ease,
         fill $transitionSpeed ease;
@@ -65,8 +67,8 @@
         top: calc(2 * $bottomMargin - (((100% - $bottomMargin - $waybarHeight) * ($hoverCoefficient - 1)) / 2) - ($hoverConst / 2)); // Top position adjustment on hover
         border-radius: calc(($borderRad * $hoverBorderRad) + (((((perToInt($waybarHeight) * 1vh - ($bottomMargin)) * $hoverCoefficient) + $hoverConst)) - (perToInt($waybarHeight) * 1vh - ($sideMargin))) + (($borderRad * $hoverBorderRad) / ((($borderRad * $hoverBorderRad) / 1px) / 2)));
     }
-    box-shadow: $hoverShadowRad $hoverShadowCol; // Box shadow styling
     background-color: $hoverWindowCol; // Background color on hover
+    box-shadow: $hoverShadowRad $hoverShadowCol; // Box shadow styling
     border: $hoverBorderThickness solid $hoverBorderCol; // Border styling on hover
     // Backdrop filter adjustments on hover
     backdrop-filter:
@@ -248,86 +250,3 @@
         brightness(calc($hoverWindowBrightness - 0.3))
         contrast($hoverWindowContrast);
 }
-
-/* General notes, code snippets, or ideas:
-
-// when it comes to the svg for the xorro logo in the menu, I used: https://danmarshall.github.io/google-font-to-svg-path/
-the size is set to 300, and the rest is shown in my svg implamentation in the html ;3
-
-// width: calc((((perToInt($waybarHeight) * 1vh - $sideMargin) * $hoverCoefficient) + $hoverConst));
-
-// width: calc((((perToInt($waybarHeight) * 1vh - $sideMargin) * (1 / $hoverCoefficient)) - $hoverConst));
-
-// height: calc(((($waybarHeight) - 2.25 * (2 * $bottomMargin)) * $hoverCoefficient) + $hoverConst);
-
-// height: calc(((($waybarHeight) - 2.25 * (2 * $bottomMargin)) * (1 / $hoverCoefficient)) - $hoverConst);
-
-// calc((((perToInt($waybarHeight) * 1vh - $sideMargin) * $hoverCoefficient) - (perToInt($waybarHeight) * 1vh - $sideMargin)) - $hoverConst));
-
-// calc(((perToInt($waybarHeight) * 1vh - ($sideMargin))) + (((($waybarHeight) - 2.25 * (2 * $sideMargin)) * $hoverCoefficient) + $hoverConst));
-
-
-.menuOpen-waybar {
-    @if $uniMargin != 0% {
-        width: calc((100% - (2 * $uniMargin)) - perToInt($waybarHeight) * 1vh); // Width calculation for waybar
-        height: calc(($waybarHeight) - 2.25 * (2 * $uniMargin)); // Height adjustment for waybar
-        top: calc(2 * ($uniMargin));
-        right: $uniMargin;
-    } @else {
-        width: calc((100% - (2 * $sideMargin)) - perToInt($waybarHeight) * 1vh);
-        height: calc((($waybarHeight) - (2.25 * (2 * $bottomMargin))));
-        top: calc(2 * ($bottomMargin));
-        right: $sideMargin;
-    }
-}
-
-.menuOpen-waybar:hover {
-    @if $uniMargin != 0% {
-        width: calc(((((100% - (2 * $uniMargin)) - (perToInt($waybarHeight) * 1vh)) * $hoverCoefficient) + $hoverConst));
-        height: calc(((($waybarHeight) - 2.25 * (2 * $uniMargin)) * $hoverCoefficient) + $hoverConst);
-        right: calc($uniMargin - (((100% - (2 * $uniMargin)) * ($hoverCoefficient - 1)) / 2) - ($hoverConst / 4));
-        top: calc(2 * $uniMargin - (((100% - $uniMargin - $waybarHeight) * ($hoverCoefficient - 1)) / 2) - ($hoverConst / 2));
-    } @else {
-        width: calc((((100% - (2 * $sideMargin)) * $hoverCoefficient) + $hoverConst) - perToInt($waybarHeight) * 1vh);
-        height: calc((((($waybarHeight) - (2.25 * (2 * $bottomMargin)))) * $hoverCoefficient) + $hoverConst);
-        right: calc($sideMargin - (((100% - (2 * $sideMargin)) * ($hoverCoefficient - 1)) / 2) - ($hoverConst / 2));
-        top: calc(2 * $bottomMargin - (((100% - $sideMargin - $waybarHeight) * ($hoverCoefficient - 1)) / 2) - ($hoverConst / 2));
-    }
-}
-
-.mainWindow {
-    position: absolute; // Absolute positioning
-    @if $uniMargin != 0% {
-        width: calc((100% - (2 * $uniMargin))); // Width adjusted for uniform margin
-        height: calc(100% - $uniMargin - $waybarHeight); // Height considering uniform margin and waybar height
-        bottom: calc(2 * ($uniMargin));
-        right: $uniMargin;
-    } @else {
-        width: calc((100% - (2 * $sideMargin)));
-        height: calc(100% - $bottomMargin - $waybarHeight);
-        bottom: calc(2 * ($bottomMargin));
-        right: $sideMargin;
-    }
-    border: $borderThickness solid $borderCol; // Border styling
-    box-shadow: $shadowRad $shadowCol;
-    background-color: $windowCol;
-}
-
-.mainWindow:hover {
-    @if $uniMargin != 0% {
-        width: calc((((100% - (2 * $uniMargin))) * $hoverCoefficient) + $hoverConst); // Hover effect for width
-        height: calc(((100% - $uniMargin - $waybarHeight) * $hoverCoefficient) + $hoverConst); // Hover effect for height
-        right: calc($uniMargin - (((100% - (2 * $uniMargin)) * ($hoverCoefficient - 1)) / 2) - ($hoverConst / 2));
-        bottom: calc(2 * $uniMargin - (((100% - $uniMargin - $waybarHeight) * ($hoverCoefficient - 1)) / 2) - ($hoverConst / 2));
-    } @else {
-        width: calc((((100% - (2 * $sideMargin))) * $hoverCoefficient) + $hoverConst);
-        height: calc(((100% - $bottomMargin - $waybarHeight) * $hoverCoefficient) + $hoverConst);
-        right: calc($sideMargin - (((100% - (2 * $sideMargin)) * ($hoverCoefficient - 1)) / 2) - ($hoverConst / 2));
-        bottom: calc(2 * $bottomMargin - (((100% - $sideMargin - $waybarHeight) * ($hoverCoefficient - 1)) / 2) - ($hoverConst / 2));
-    }
-    box-shadow: $shadowRad $shadowCol;
-    background-color: $hoverWindowCol;
-    border: $hoverBorderThickness solid $hoverBorderCol;
-
-
-*/

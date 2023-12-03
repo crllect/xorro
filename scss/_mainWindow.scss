@@ -33,6 +33,8 @@
         bottom $transitionSpeed ease,
         transform $transitionSpeed ease,
         backdrop-filter $transitionSpeed ease,
+        box-shadow $fastTransitionSpeed ease,
+        border $fastTransitionSpeed ease,
         border-radius $transitionSpeed ease; // Smooth transitions for various properties
 }
 
@@ -50,9 +52,9 @@
         bottom: calc(2 * $bottomMargin - (((100% - $sideMargin - $waybarHeight) * ($hoverCoefficient - 1)) / 2) - ($hoverConst / 2));
         border-radius: calc(($borderRad * $hoverBorderRad) + (((((perToInt($waybarHeight) * 1vh - ($bottomMargin)) * $hoverCoefficient) + ($hoverConst * perToInt($bottomMargin)))) - (perToInt($waybarHeight) * 1vh - ($sideMargin))) + (($borderRad * $hoverBorderRad) / ((($borderRad * $hoverBorderRad) / 1px) / 2)));
     }
-    box-shadow: $shadowRad $shadowCol;
+    box-shadow: $hoverShadowRad $hoverShadowCol; // Box shadow styling
+    border: $hoverBorderThickness solid $hoverBorderCol; // Border styling on hover
     background-color: $hoverWindowCol;
-    border: $hoverBorderThickness solid $hoverBorderCol;
     backdrop-filter:
         blur($hoverWindowBlur)
         brightness($hoverWindowBrightness)

@@ -43,6 +43,7 @@ $borderCol: #9c9c9c5b;
 
 // Transitions
 $transitionSpeed: 0.4s;
+$fastTransitionSpeed: 0.1s;
  
 // Menu
 $menuButtonCol: #ffffff;
@@ -65,7 +66,7 @@ $fullMenuOffScreenWindowGrad: linear-gradient(90deg, #00000000 0%, $activeWindow
 }
 
 // Presets
-$sizePreset: 3;
+$sizePreset: 2;
 
 @if $sizePreset != 0 {
     @if $sizePreset == 1 {
