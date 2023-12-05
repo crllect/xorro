@@ -29,18 +29,24 @@
         background-color $transitionSpeed ease,
         width $transitionSpeed ease,
         height $transitionSpeed ease,
-        right $transitionSpeed ease,
+        left $transitionSpeed ease,
         bottom $transitionSpeed ease,
+        right $transitionSpeed ease,
+        top $transitionSpeed ease,
         transform $transitionSpeed ease,
+        border-radius $transitionSpeed ease,
+        stroke $transitionSpeed ease,
         backdrop-filter $transitionSpeed ease,
         box-shadow $fastTransitionSpeed ease,
         border $fastTransitionSpeed ease,
-        border-radius $transitionSpeed ease; // Smooth transitions for various properties
+        fill $transitionSpeed ease; // Smooth transitions for various properties
 }
 
 .mainWindow:hover {
     @if $uniMargin != 0% {
-        width: calc((((100% - (2 * $uniMargin))) * $hoverCoefficient) + $hoverConst); // Hover effect for width
+        width: calc((((100% - (2 * $uniMargin))) * $hoverCoefficient) + $hoverConst); // Hover effect for width\
+        width: calc(((((100% - (2 * $uniMargin)) * $hoverCoefficient) + (812312 * $hoverConst))));
+        width: calc((100% - (2 * $uniMargin)) * $hoverCoefficient + $hoverConst);
         height: calc(((100% - $uniMargin - $waybarHeight) * $hoverCoefficient) + $hoverConst); // Hover effect for height
         right: calc($uniMargin - (((100% - (2 * $uniMargin)) * ($hoverCoefficient - 1)) / 2) - ($hoverConst / 2));
         bottom: calc(2 * $uniMargin - (((100% - $uniMargin - $waybarHeight) * ($hoverCoefficient - 1)) / 2) - ($hoverConst / 2));
@@ -63,7 +69,7 @@
 
 .menuOpen-mainWindow {
     @if $uniMargin != 0% {
-        width: calc((100% - (2 * $uniMargin)) - (((perToInt($waybarHeight) * 1vh - ($uniMargin))) + (((($waybarHeight) - 2.25 * (2 * $uniMargin))))) - $uniMargin); // Width adjusted for uniform margin
+        width: calc(((100% - (2 * $uniMargin))) - (((perToInt($waybarHeight) * 1vh - ($uniMargin))) + (((($waybarHeight) - 2.25 * (2 * $uniMargin))))) - $uniMargin); // Width adjusted for uniform margin
         height: calc(100% - $uniMargin - $waybarHeight); // Height considering uniform margin and waybar height
         bottom: calc(2 * ($uniMargin));
         right: $uniMargin;
@@ -81,14 +87,14 @@
 
 .menuOpen-mainWindow:hover {
     @if $uniMargin != 0% {
-        width: calc((((100% - (2 * $uniMargin))) * $hoverCoefficient) + $hoverConst  - (((perToInt($waybarHeight) * 1vh - ($uniMargin))) + (((($waybarHeight) - 2.25 * (2 * $uniMargin))))) - (1.5 * $uniMargin) + ($uniMargin - (((100% - (2 * $uniMargin)) * ($hoverCoefficient - 1)) / 2) - ($hoverConst / 2))); // Hover effect for width
+        width: calc(((((100% - (2 * $uniMargin)) * $hoverCoefficient) + $hoverConst)) - (((perToInt($waybarHeight) * 1vh - ($uniMargin))) + (((($waybarHeight) - 2.25 * (2 * $uniMargin))))) - $uniMargin); // Hover effect for width
         height: calc(((100% - $uniMargin - $waybarHeight) * $hoverCoefficient) + $hoverConst); // Hover effect for height
-        right: calc($uniMargin - (((100% - (2 * $uniMargin)) * ($hoverCoefficient - 1)) / 2) - ($hoverConst / 2));
+        right: calc($uniMargin - (((100% - (2 * $uniMargin)) * ($hoverCoefficient - 1)) / 2) - ($hoverConst / 4));
         bottom: calc(2 * $uniMargin - (((100% - $uniMargin - $waybarHeight) * ($hoverCoefficient - 1)) / 2) - ($hoverConst / 2));
     } @else {
-        width: calc((((100% - (2 * $sideMargin))) * $hoverCoefficient) + $hoverConst  - (((perToInt($waybarHeight) * 1vh - ($sideMargin))) + (((($waybarHeight) - 2.25 * (2 * $sideMargin))))) - (1.5 * $sideMargin) + ($sideMargin - (((100% - (2 * $sideMargin)) * ($hoverCoefficient - 1)) / 2) - ($hoverConst / 2)));
+        width: calc(((((100% - (2 * $sideMargin)) * $hoverCoefficient) + $hoverConst)) - (((perToInt($waybarHeight) * 1vh - ($sideMargin))) + (((($waybarHeight) - 2.25 * (2 * $sideMargin))))) - $sideMargin);
         height: calc(((100% - $bottomMargin - $waybarHeight) * $hoverCoefficient) + $hoverConst);
-        right: calc($sideMargin - (((100% - (2 * $sideMargin)) * ($hoverCoefficient - 1)) / 2) - ($hoverConst / 2));
+        right: calc($sideMargin - (((100% - (2 * $sideMargin)) * ($hoverCoefficient - 1)) / 2) - ($hoverConst / 4));
         bottom: calc(2 * $bottomMargin - (((100% - $sideMargin - $waybarHeight) * ($hoverCoefficient - 1)) / 2) - ($hoverConst / 2));
     }
     backdrop-filter:

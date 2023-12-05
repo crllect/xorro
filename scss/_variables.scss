@@ -1,8 +1,9 @@
 // Background
-$bgCol: url(https://w.wallhaven.cc/full/wy/wallhaven-wyp7ep.jpg);
+$bgCol: url(https://raw.githubusercontent.com/hyprwm/Hyprland/main/assets/wall_anime_4K.png);
+  // https://w.wallhaven.cc/full/wy/wallhaven-wyp7ep.jpg
 
 // Window Properties
-$windowCol: rgba(12, 26, 28, 0.8);
+$windowCol: rgba(20, 29, 31, 0.8); // 12, 26, 28, 0.8
 $windowBlur: 1em;
 $windowBrightness: 1;
 $windowContrast: 1.1;
@@ -11,24 +12,6 @@ $windowContrast: 1.1;
 $shadowCol: rgba(0, 0, 0, 0.5);
 $shadowRad: 5px 5px 5px;
 
-// Hover Vars
-$hoverConst: 0.5em; // 0.7, 0.5, 0.25
-$hoverCoefficient: 1;
-$hoverWindowBlur: 1.5em;
-$hoverWindowBrightness: 1.2;
-$hoverWindowContrast: 1.15;
-$hoverBorderCol: rgba(38, 222, 250, 0.9);
-$hoverWindowCol: rgba(26, 28, 28, 0.9);
-$hoverBorderThickness: 2.5px;
-$hoverBorderRad: 0.8;
-$hoverBorderOpacity: rgba(255, 255, 255, 0.744);
-$hoverShadowCol: rgba(
-    calc(red($hoverBorderCol) * red($hoverBorderOpacity) / 255),
-    calc(green($hoverBorderCol) * green($hoverBorderOpacity) / 255),
-    calc(blue($hoverBorderCol) * blue($hoverBorderOpacity) / 255),
-    calc(alpha($hoverBorderCol) * alpha($hoverBorderOpacity))
-);
-$hoverShadowRad: 0px 0px 10px;
 
 // Margins
 $uniMargin: 0.5%; // 1, 0.5, 0.225
@@ -50,11 +33,31 @@ $menuButtonCol: #ffffff;
 
 // Active
 $activeTransition: $transitionSpeed;
-$activeWindowCol: rgba(24, 76, 84, 0.6);
+$activeWindowCol: rgba(62, 85, 88, 0.6); // 24, 76, 84, 0.6
 
 // Full Menu
 $fullMenuOffScreenBorderGrad: linear-gradient(90deg, #00000000 0%, $borderCol 100%);
 $fullMenuOffScreenWindowGrad: linear-gradient(90deg, #00000000 0%, $activeWindowCol 100%);
+$fullMenuOffset: 10px;
+
+// Hover Vars
+$hoverConst: 0.5em; // 0.7, 0.5, 0.25
+$hoverCoefficient: 1;
+$hoverWindowBlur: 1.5em;
+$hoverWindowBrightness: 1.2;
+$hoverWindowContrast: 1.15;
+$hoverBorderCol: rgba(38, 222, 250, 0.9);
+$hoverWindowCol: rgba(26, 28, 28, 0.9);
+$hoverBorderThickness: 2.5px;
+$hoverBorderRad: 0.8;
+$hoverBorderOpacity: rgba(255, 255, 255, 0.744);
+$hoverShadowCol: rgba(
+    calc(red($hoverBorderCol) * red($hoverBorderOpacity) / 255),
+    calc(green($hoverBorderCol) * green($hoverBorderOpacity) / 255),
+    calc(blue($hoverBorderCol) * blue($hoverBorderOpacity) / 255),
+    calc(alpha($hoverBorderCol) * alpha($hoverBorderOpacity))
+);
+$hoverShadowRad: 0px 0px $fullMenuOffset;
 
 // Functions
 @function perToInt($percent) { // Function to convert percentage to integer
@@ -66,23 +69,30 @@ $fullMenuOffScreenWindowGrad: linear-gradient(90deg, #00000000 0%, $activeWindow
 }
 
 // Presets
-$sizePreset: 2;
+$preset: 0;
 
-@if $sizePreset != 0 {
-    @if $sizePreset == 1 {
+@if $preset != 0 {
+    @if $preset == 1 {
         $borderRad: 22.5px;
         $uniMargin: 1%;
         $hoverConst: 0.7em;
         $waybarHeight: 17.5%;
-    } @else if $sizePreset == 2 {
+    } @else if $preset == 2 {
         $borderRad: 12.5px;
         $uniMargin: 0.5%;
         $hoverConst: 0.5em;
         $waybarHeight: 12.5%;
-    } @else if $sizePreset == 3 {
+    } @else if $preset == 3 {
         $borderRad: 6px;
         $uniMargin: 0.225%;
         $hoverConst: 0.25em;
         $waybarHeight: 7.5%;
+    } @else if $preset == hypr {
+        $borderRad: 10.5px;
+        $uniMargin: 0.5%;
+        $hoverConst: 0.2em;
+        $waybarHeight: 7.5%;
+        $borderThickness: 1.75px;
+        $hoverBorderThickness: 2px;
     }
 }

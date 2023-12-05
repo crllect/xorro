@@ -156,14 +156,16 @@
 }
 .fullMenu {
     position: absolute; // Absolute positioning
-    width: 0px;
-    height: calc(100% - $uniMargin - $waybarHeight);
     @if $uniMargin != 0% {
-        top: calc((($waybarHeight) - 2.25 * (2 * $uniMargin)) + (2 * ($uniMargin)) + $uniMargin);
-        left: -10em;
+        width: calc(((perToInt($waybarHeight) * 1vh - ($uniMargin))) + (((($waybarHeight) - 2.25 * (2 * $uniMargin)))));
+        height: calc(100% - $bottomMargin - $waybarHeight);
+        bottom: calc(2 * ($uniMargin));
+        left: -20%;
     } @else {
-        top: calc((($waybarHeight) - 2.25 * (2 * $bottomMargin)) + (2 * ($bottomMargin)) + $bottomMargin);
-        left: -10em;
+        width: calc(((perToInt($waybarHeight) * 1vh - ($sideMargin))) + (((($waybarHeight) - 2.25 * (2 * $sideMargin)))));
+        height: calc(100% - $uniMargin - $waybarHeight);
+        bottom: calc(2 * ($bottomMargin));
+        left: -20%;
     }
     box-shadow: 0px 0px 0px #00000000;
     border: $borderThickness solid $fullMenuOffScreenBorderGrad;
@@ -188,12 +190,12 @@
     @if $uniMargin != 0% {
         width: calc(((perToInt($waybarHeight) * 1vh - ($uniMargin))) + (((($waybarHeight) - 2.25 * (2 * $uniMargin))))); // Width calculation for menu
         height: calc(100% - $uniMargin - $waybarHeight); // Height calculation for menu
-        top: calc(2 * ($uniMargin) + (($waybarHeight) - 2.25 * (2 * $uniMargin)) + $uniMargin);
+        bottom: calc(2 * ($uniMargin));
         left: $uniMargin;
     } @else {
         width: calc(((perToInt($waybarHeight) * 1vh - ($sideMargin))) + (((($waybarHeight) - 2.25 * (2 * $sideMargin))))); // Width calculation for menu
         height: calc(100% - $bottomMargin - $waybarHeight); // Height calculation for menu
-        top: calc(2 * ($bottomMargin) + (($waybarHeight) - 2.25 * (2 * $bottomMargin)) + $bottomMargin);
+        bottom: calc(2 * ($bottomMargin));
         left: $sideMargin;
     }
     border: $borderThickness solid $borderCol; // Border styling
@@ -212,7 +214,7 @@
     text-align: center; // Text alignment
     transform: translate(0, 0); // Initial transform state
     // Transition effects for various properties
-    transition: 
+    transition:
         background-color $transitionSpeed ease,
         width $transitionSpeed ease,
         height $transitionSpeed ease,
@@ -223,16 +225,18 @@
         transform $transitionSpeed ease,
         border-radius $transitionSpeed ease,
         stroke $transitionSpeed ease,
+        border $transitionSpeed ease,
+        box-shadow $transitionSpeed ease,
         backdrop-filter $transitionSpeed ease,
         fill $transitionSpeed ease;
 }
 
 .menuOpen-fullMenu:hover {
     @if $uniMargin != 0% {
-        width: calc(((((perToInt($waybarHeight) * 1vh - ($uniMargin))) + (((($waybarHeight) - 2.25 * (2 * $uniMargin)))) * (1 / $hoverCoefficient)) - ($hoverConst / 2))); // Width calculation for menu
-        height: calc(((100% - $uniMargin - $waybarHeight) * (1 / $hoverCoefficient)) - ($hoverConst / 2)); // Height adjustment on hover
-        top: calc((2 * $uniMargin - (((100% - $uniMargin - $waybarHeight) * ($hoverCoefficient - 1)) / 2) + ($hoverConst / 4)) + (2 * ($uniMargin) + (($waybarHeight) - 2.25 * (2 * $uniMargin)) - $uniMargin));
-        left: calc($uniMargin - (((100% - (2 * $uniMargin)) * ($hoverCoefficient - 1)) / 2) + ($hoverConst / 2) - ($uniMargin / 4)); // Left position adjustment on hover
+        width: calc((((perToInt($waybarHeight) * 1vh - ($uniMargin))) + (((($waybarHeight) - 2.25 * (2 * $uniMargin))))) * (1 / $hoverCoefficient) - $hoverConst); // Width calculation for menu
+        height: calc(100% - $uniMargin - $waybarHeight); // Height calculation for menu
+        bottom: calc(2 * ($uniMargin));
+        left: $uniMargin;
         border-radius: calc($borderRad + (((((perToInt($waybarHeight) * 1vh - ($uniMargin)) * $hoverCoefficient) + $hoverConst)) - (perToInt($waybarHeight) * 1vh - ($uniMargin))) + ($borderRad / (($borderRad / 1px) / 2)));
     } @else {
         width: calc(((((perToInt($waybarHeight) * 1vh - ($sideMargin))) + (((($waybarHeight) - 2.25 * (2 * $sideMargin)))) * (1 / $hoverCoefficient)) - ($hoverConst / 2))); // Width calculation for menu
